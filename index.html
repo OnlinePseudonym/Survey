@@ -13,12 +13,55 @@
         </header>
         <main>
             <form id="survey-form">
-                <label for="name" class="form-label">Name</label>
-                <input id="name" type="text" placeholder="John Jacob Jingleheimer Schmidt"/>
-                <label for="email" class="form-label">Email</label>
-                <input id="email" type="text" placeholder="example@email.org"/>
-                <label for="age" class="form-label">Age</label>
-                <input id="age" type="number" placeholder="100!"/>
+                <div class="form--text__input">
+                    <label id="name-label" for="name" class="form-label">Name</label>
+                    <input id="name" name="name" type="text" placeholder="John Jacob Jingleheimer Schmidt"/>
+                </div>
+                <div class="form--text__input">
+                    <label id="email-label" for="email" class="form-label">Email</label>
+                    <input id="email" name="email" type="email" placeholder="JohnJacob@Jingleheimer.net"/>
+                </div>
+                <div class="form--text__input">
+                    <label for="current-job" class="form-label">Current Position</label>
+                    <input id="current-job" name="current-job" type="text" placeholder="CTO Apple"/>
+                </div>
+                <div class="form--text__input">
+                    <label id="number-label" for="current-experience" class="form-label">Years in current position</label>
+                    <input id="number" name="current-experience" type="number" placeholder="10" min="0" max="60" />
+                </div>
+                <div class="form--dropdown__input">
+                    <div><label for="motivation">What motivates your desire to learn web development?</label for="motivation"></label></div>
+                    <select id="dropdown" name="motivation">
+                        <option>Pursuit of Knowledge</option>
+                        <option>Personal Project</option>
+                        <option>Improve Productivity at Work</option>
+                        <option>Career Change</option>
+                        <option>Clicked the wrong link one day and fell into an inescapable rabbit hole</option>  
+                    </select>
+                </div>
+                <div class="form--radio__input">
+                    <div><label for="time">How much time I week do you dedicate to learning web development?</label></div>
+                    <label for="time"><input type="radio" name="time" value="< 10 hours">< 10 hours</label>
+                    <label for="time"><input type="radio" name="time" value="10-20 hours">10-20 hours</label>
+                    <label for="time"><input type="radio" name="time" value="21-30 hours">21-30 hours</label>
+                    <label for="time"><input type="radio" name="time" value="31-40 hours">31-40 hours</label>
+                    <label for="time"><input type="radio" name="time" value="> 40 hours">> 40 hours</label>
+                </div>
+                <div class="form--checkbox__input">
+                    <div><label for="tools">What resources do you regularly use to further your goals?</label></div>
+                    <label for="tools"><input type="checkbox" name="tools" value="Free Code Camp">Free Code Camp</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Udemy">Udemy</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Udacity">Udacity</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="edX">edX</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Coursera">Coursera</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Youtube">Youtube</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Reddit">Reddit</label>
+                    <label for="tools"><input type="checkbox" name="tools" value="Stack Exchange">Stack Exchange</label>
+                </div>
+                <div class="form--textarea">
+                    <textarea rows="8" placeholder="Additional Comments"></textarea>
+                </div>
+                <button type="submit" id="submit">Submit</button>
             </form>
         </main>
         <script src="js/app.js"></script>
