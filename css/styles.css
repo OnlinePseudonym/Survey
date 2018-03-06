@@ -103,7 +103,7 @@ p {
     font-family: 'Open Sans';
     font-weight: 300;
 }
-/**  **/
+/** radio styling **/
 
 .list-item {
     position: relative;
@@ -133,9 +133,6 @@ p {
 }
 
 .form--radio__input--label {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 0;
     color: #666;
     font-size: 1.25rem;
     text-transform: uppercase;
