@@ -28,7 +28,7 @@ p {
 }
 
 .label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     letter-spacing: 0.05rem;
 }
 
@@ -67,7 +67,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     transform-origin: left bottom;
-    transform: translate(0, 2.125rem) scale(1.5);
+    transform: translate(0, 2.125rem) scale(1);
 }
 
 .form--text__input--input::-webkit-input-placeholder {
@@ -81,7 +81,7 @@ p {
 
 .form--text__input--input:not(:placeholder-shown) + .form--text__input--label,
 .form--text__input--input:focus + .form--text__input--label {
-  transform: translate(0, 0) scale(1);
+  transform: translate(0, 0) scale(.75);
   cursor: pointer;
 }
 
