@@ -9,46 +9,69 @@
     <body>
         <header>
             <h1 id="title">Study Habits</h1>
-            <p id="description">Please tell us how and why do you study web development.</p>
+            <p id="description">Please tell us how and why you study web development.</p>
         </header>
         <main>
-            <form id="survey-form">
-                <div class="form--text__input">
-                    <label id="name-label" for="name" class="form-label">Name</label>
-                    <input id="name" name="name" type="text" placeholder="John Jacob Jingleheimer Schmidt"/>
+            <form id="survey-form" class="form">
+                <div>
+                    <div class="form--text__input">
+                        <input id="name" class="form--text__input--input label" name="name" type="text" placeholder="John Jacob Jingleheimer Schmidt" required/>
+                        <label id="name-label" for="name" class="form--text__input--label">Name</label>
+                    </div>
+                    <div class="form--text__input">
+                        <input id="email" class="form--text__input--input label" name="email" type="email" placeholder="JohnJacob@Jingleheimer.net" required/>
+                        <label id="email-label" for="email" class="form--text__input--label">Email</label>
+                    </div>
+                    <div class="form--text__input">
+                        <input id="current-job" class="form--text__input--input label" name="current-job" type="text" placeholder="CTO Apple"/>
+                        <label for="current-job" class="form--text__input--label">Current Position</label>
+                    </div>
+                    <div class="form--text__input">
+                        <input id="number" class="form--text__input--input label" name="number" type="number" placeholder="10" min="0" max="60" />
+                        <label id="number-label" for="number" class="form--text__input--label">Years in current position</label>
+                    </div>
                 </div>
-                <div class="form--text__input">
-                    <label id="email-label" for="email" class="form-label">Email</label>
-                    <input id="email" name="email" type="email" placeholder="JohnJacob@Jingleheimer.net"/>
-                </div>
-                <div class="form--text__input">
-                    <label for="current-job" class="form-label">Current Position</label>
-                    <input id="current-job" name="current-job" type="text" placeholder="CTO Apple"/>
-                </div>
-                <div class="form--text__input">
-                    <label id="number-label" for="current-experience" class="form-label">Years in current position</label>
-                    <input id="number" name="current-experience" type="number" placeholder="10" min="0" max="60" />
-                </div>
-                <div class="form--dropdown__input">
-                    <div><label for="motivation">What motivates your desire to learn web development?</label for="motivation"></label></div>
-                    <select id="dropdown" name="motivation">
-                        <option>Pursuit of Knowledge</option>
-                        <option>Personal Project</option>
-                        <option>Improve Productivity at Work</option>
-                        <option>Career Change</option>
-                        <option>Clicked the wrong link one day and fell into an inescapable rabbit hole</option>  
-                    </select>
+                <div class="form--dropdown__input label">
+                    <div><label class="form-dropdown__input--label" for="motivation">Why are you learning web development?</label for="motivation"></label></div>
+                    <div>
+                        <select class="form--dropdown__input--select" id="dropdown" name="motivation">
+                            <option class="form--dropdown__input--option">Pursuit of Knowledge</option>
+                            <option class="form--dropdown__input--option">Personal Project</option>
+                            <option class="form--dropdown__input--option">Improve Productivity at Work</option>
+                            <option class="form--dropdown__input--option">Career Change</option>
+                            <option class="form--dropdown__input--option">Clicked the wrong link one day</option>  
+                        </select>
+                    </div>
                 </div>
                 <div class="form--radio__input">
-                    <div><label for="time">How much time I week do you dedicate to learning web development?</label></div>
-                    <label for="time"><input type="radio" name="time" value="< 10 hours">< 10 hours</label>
-                    <label for="time"><input type="radio" name="time" value="10-20 hours">10-20 hours</label>
-                    <label for="time"><input type="radio" name="time" value="21-30 hours">21-30 hours</label>
-                    <label for="time"><input type="radio" name="time" value="31-40 hours">31-40 hours</label>
-                    <label for="time"><input type="radio" name="time" value="> 40 hours">> 40 hours</label>
+                    <div><label for="time" class="label">How much time I week do you study?</label></div>
+                    <ul>
+                        <li class="list-item">
+                            <input type="radio" class="radio-btn" name="time" id="10" value="< 10 hours">
+                            <label class="form--radio__input--label" for="10">< 10 hours</label>
+                        </li>
+                        <li class="list-item">
+                                <input type="radio" class="radio-btn" name="time" id="20" value="10-20 hours">
+                                <label class="form--radio__input--label" for="20">10-20 hours</label>
+                        </li>
+                        <li class="list-item">
+                            <input type="radio" class="radio-btn" name="time" id="30" value="21-30 hours">
+                            <label class="form--radio__input--label" for="30">21-30 hours</label>
+                        </li>
+                        <li class="list-item">
+                            <input type="radio" class="radio-btn" name="time" id="40" value="31-40 hours">
+                            <label class="form--radio__input--label" for="40">31-40 hours</label>
+                        </li>
+                        <li class="list-item">
+                            <input type="radio" class="radio-btn" name="time" id="40+" value="> 40 hours">
+                            <label class="form--radio__input--label" for="40+">> 40 hours</label>
+                        </li>
+                    </ul>
                 </div>
                 <div class="form--checkbox__input">
-                    <div><label for="tools">What resources do you regularly use to further your goals?</label></div>
+                    <div class="form--checkbox__input--label">
+                        <label for="tools" class="label">What learning platforms have you used?</label>
+                    </div>
                     <label for="tools"><input type="checkbox" name="tools" value="Free Code Camp">Free Code Camp</label>
                     <label for="tools"><input type="checkbox" name="tools" value="Udemy">Udemy</label>
                     <label for="tools"><input type="checkbox" name="tools" value="Udacity">Udacity</label>
@@ -58,9 +81,7 @@
                     <label for="tools"><input type="checkbox" name="tools" value="Reddit">Reddit</label>
                     <label for="tools"><input type="checkbox" name="tools" value="Stack Exchange">Stack Exchange</label>
                 </div>
-                <div class="form--textarea">
-                    <textarea rows="8" placeholder="Additional Comments"></textarea>
-                </div>
+                <textarea rows="8">Addition comments</textarea>
                 <button type="submit" id="submit">Submit</button>
             </form>
         </main>
