@@ -70,7 +70,7 @@ p {
     transform: translate(0, 2.125rem) scale(1.5);
 }
 
-::-webkit-input-placeholder {
+.form--text__input--input::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
 }
@@ -217,7 +217,7 @@ input[type="checkbox"]:checked:after{
 
 textarea {
     justify-self: center;
-    width: 90%;
+    width: 95%;
 }
 
 /** submit button **/
